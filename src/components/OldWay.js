@@ -23,7 +23,7 @@ export default class ClassLifecycle extends Component {
 
   componentDidMount() {
     console.log("LifecycleOld mounted!!  \u{1F3C7}");
-    this.getProfiles();
+    // this.getProfiles();
   }
   componentDidUpdate(prevProps, prevState, snapshot) {
     console.log("LifecycleOld updated!! \u{23EB}");
@@ -34,10 +34,10 @@ export default class ClassLifecycle extends Component {
 
   getProfiles() {
     axios
-      .get("https://randomuser.me/api/?results=100")
+      .get("https://randomuser.me/api/?results=50")
       .then(res => {
         const results = res.data.results;
-        // console.log(results);
+        console.log(results);
         this.setState({ profiles: results });
       })
       .catch(err => console.log(err));
@@ -88,7 +88,7 @@ export default class ClassLifecycle extends Component {
         </form>
         <h2>Email:{this.state.username}</h2>
         <h2>Password:{this.state.password}</h2>
-        {/* <div className="profile_container">{this.renderProfiles()}</div> */}
+        <div className="profile_container">{this.renderProfiles()}</div>
       </div>
     );
   }
