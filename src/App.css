@@ -17,3 +17,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.profile_container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

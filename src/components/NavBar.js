@@ -1,38 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "antd";
+
 const style = {
   navContainer: {
     display: "flex",
-    justifyContent: "space-around",
-    flexWrap: "wrap"
+    justifyContent: "center"
   },
   link: {
-    margin: "10px auto"
+    margin: "10px"
   }
 };
 
 export default function NavBar() {
   return (
     <div style={style.navContainer}>
-      <Link to="/state/old" style={style.link}>
+      <Link to="/" style={style.link}>
         <Button type="primary" size="large">
-          Updating State (OLD)
+          Old & Busted <span role="img">💩</span>
         </Button>
       </Link>
-      <Link to="/state/new" style={style.link}>
+      <Link to="/new" style={style.link}>
         <Button type="primary" size="large">
-          Updating State (NEW)
-        </Button>
-      </Link>
-      <Link to="/lifecycle/old" style={style.link}>
-        <Button type="primary" size="large">
-          Lifecycle Management (OLD)
-        </Button>
-      </Link>
-      <Link to="/lifecycle/new" style={style.link}>
-        <Button type="primary" size="large">
-          Lifecycle Management (NEW)
+          New Hotness <span role="img">🔥</span>
         </Button>
       </Link>
     </div>
