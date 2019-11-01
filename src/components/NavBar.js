@@ -17,12 +17,18 @@ export default function NavBar() {
     <div style={style.navContainer}>
       <Link to="/" style={style.link}>
         <Button type="primary" size="large">
-          Old & Busted <span role="img">💩</span>
+          Old & Busted{" "}
+          <span role="img" aria-label="pile-o-poo">
+            💩
+          </span>
         </Button>
       </Link>
       <Link to="/new" style={style.link}>
         <Button type="primary" size="large">
-          New Hotness <span role="img">🔥</span>
+          New Hotness{" "}
+          <span role="img" aria-label="fiya">
+            🔥
+          </span>
         </Button>
       </Link>
     </div>

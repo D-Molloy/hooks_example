@@ -23,7 +23,7 @@ export default class ClassLifecycle extends Component {
 
   componentDidMount() {
     console.log("LifecycleOld mounted!!  \u{1F3C7}");
-    // this.getProfiles();
+    this.getProfiles();
   }
   componentDidUpdate(prevProps, prevState, snapshot) {
     console.log("LifecycleOld updated!! \u{23EB}");
